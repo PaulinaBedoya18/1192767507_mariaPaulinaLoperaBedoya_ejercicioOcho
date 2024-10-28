@@ -18,3 +18,15 @@ function iniciarSesion() {
     }
     alert("Completaste 3 intentos fallidos. El sistema se cerrará.");
 }
+
+function calcularSalarioVariosEmpleados() {
+    let continuar = true; 
+
+    while (continuar) { 
+        let horasTrabajadas = capturarHorasTrabajo(); 
+        let salario = calcularSalario(horasTrabajadas); 
+        mostrarSalario(salario); 
+
+        continuar = confirm("¿Desea calcular el salario de otro empleado?"); 
+    }
+}
